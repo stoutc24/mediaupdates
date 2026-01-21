@@ -125,6 +125,31 @@
             color: #666;
             font-style: italic;
         }
+        .media-card-with-poster {
+            display: flex;
+            gap: 15px;
+        }
+        .media-poster {
+            flex-shrink: 0;
+            width: 100px;
+            height: 150px;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        .media-content {
+            flex: 1;
+            min-width: 0;
+        }
+        @media (max-width: 500px) {
+            .media-card-with-poster {
+                flex-direction: column;
+            }
+            .media-poster {
+                width: 80px;
+                height: 120px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -307,25 +332,6 @@
                 <p class="library-tag">Fright Night</p>
             </div>
 
-            <div class="media-card">
-                <div class="media-title">Rise of the Guardians <span class="media-year">(2012)</span></div>
-                <div class="media-meta">
-                    <span class="rating mid">7.5</span>
-                    <span>PG</span>
-                    <span>97 min</span>
-                </div>
-                <div class="genre-tags">
-                    <span class="genre-tag">Fantasy</span>
-                    <span class="genre-tag">Animation</span>
-                </div>
-                <p class="media-summary">When an evil spirit known as Pitch lays down the gauntlet to take over the world, the immortal Guardians must join forces for the first time to protect the hopes, beliefs, and imaginations of children all over the world.</p>
-                <div class="media-credits">
-                    <strong>Director:</strong> Peter Ramsey<br>
-                    <strong>Cast:</strong> Chris Pine, Alec Baldwin, Jude Law
-                </div>
-                <p class="library-tag">Happy Holidays!</p>
-            </div>
-
         </div>
 
         <h2 class="section-title">TV Shows</h2>
@@ -362,159 +368,209 @@
 
         <h2 class="section-title">Star Wars Collection</h2>
         <div class="media-grid">
-            <div class="media-card">
-                <div class="media-title">Star Wars (A New Hope) <span class="media-year">(1977)</span></div>
-                <div class="media-meta">
-                    <span class="rating high">9.4</span>
-                    <span>PG</span>
-                    <span>125 min</span>
+            <div class="media-card media-card-with-poster">
+                <img src="https://image.tmdb.org/t/p/w200/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg" alt="Star Wars" class="media-poster">
+                <div class="media-content">
+                    <div class="media-title">Star Wars (A New Hope) <span class="media-year">(1977)</span></div>
+                    <div class="media-meta">
+                        <span class="rating high">9.4</span>
+                        <span>PG</span>
+                        <span>125 min</span>
+                    </div>
+                    <p class="media-summary">Luke Skywalker joins forces with a Jedi Knight and others to rescue Princess Leia from the Empire's world-destroying battle station.</p>
+                    <div class="media-credits"><strong>Director:</strong> George Lucas<br><strong>Cast:</strong> Mark Hamill, Harrison Ford, Carrie Fisher</div>
                 </div>
-                <p class="media-summary">Luke Skywalker joins forces with a Jedi Knight and others to rescue Princess Leia from the Empire's world-destroying battle station.</p>
-                <div class="media-credits"><strong>Director:</strong> George Lucas<br><strong>Cast:</strong> Mark Hamill, Harrison Ford, Carrie Fisher</div>
             </div>
 
-            <div class="media-card">
-                <div class="media-title">The Empire Strikes Back <span class="media-year">(1980)</span></div>
-                <div class="media-meta">
-                    <span class="rating high">9.3</span>
-                    <span>PG</span>
-                    <span>127 min</span>
+            <div class="media-card media-card-with-poster">
+                <img src="https://image.tmdb.org/t/p/w200/nNAeTmF4CtdSgMDplXTDPOpYzsX.jpg" alt="The Empire Strikes Back" class="media-poster">
+                <div class="media-content">
+                    <div class="media-title">The Empire Strikes Back <span class="media-year">(1980)</span></div>
+                    <div class="media-meta">
+                        <span class="rating high">9.3</span>
+                        <span>PG</span>
+                        <span>127 min</span>
+                    </div>
+                    <p class="media-summary">Luke learns the Force from Yoda while Darth Vader pursues him relentlessly. One of the greatest sequels ever made.</p>
+                    <div class="media-credits"><strong>Director:</strong> Irvin Kershner<br><strong>Cast:</strong> Mark Hamill, Harrison Ford, Carrie Fisher</div>
                 </div>
-                <p class="media-summary">Luke learns the Force from Yoda while Darth Vader pursues him relentlessly. One of the greatest sequels ever made.</p>
-                <div class="media-credits"><strong>Director:</strong> Irvin Kershner<br><strong>Cast:</strong> Mark Hamill, Harrison Ford, Carrie Fisher</div>
             </div>
 
-            <div class="media-card">
-                <div class="media-title">Return of the Jedi <span class="media-year">(1983)</span></div>
-                <div class="media-meta">
-                    <span class="rating high">8.3</span>
-                    <span>PG</span>
-                    <span>135 min</span>
+            <div class="media-card media-card-with-poster">
+                <img src="https://image.tmdb.org/t/p/w200/jQYlydvHm3kUix1f8prMucrplhm.jpg" alt="Return of the Jedi" class="media-poster">
+                <div class="media-content">
+                    <div class="media-title">Return of the Jedi <span class="media-year">(1983)</span></div>
+                    <div class="media-meta">
+                        <span class="rating high">8.3</span>
+                        <span>PG</span>
+                        <span>135 min</span>
+                    </div>
+                    <p class="media-summary">Luke battles Jabba the Hutt and Darth Vader to save his comrades and triumph over the Empire.</p>
+                    <div class="media-credits"><strong>Director:</strong> Richard Marquand<br><strong>Cast:</strong> Mark Hamill, Harrison Ford, Carrie Fisher</div>
                 </div>
-                <p class="media-summary">Luke battles Jabba the Hutt and Darth Vader to save his comrades and triumph over the Empire.</p>
-                <div class="media-credits"><strong>Director:</strong> Richard Marquand<br><strong>Cast:</strong> Mark Hamill, Harrison Ford, Carrie Fisher</div>
             </div>
 
-            <div class="media-card">
-                <div class="media-title">The Phantom Menace <span class="media-year">(1999)</span></div>
-                <div class="media-meta">
-                    <span class="rating low">5.4</span>
-                    <span>PG</span>
-                    <span>136 min</span>
+            <div class="media-card media-card-with-poster">
+                <img src="https://image.tmdb.org/t/p/w200/6wkfovpn7Eq8dYNKaG5PY3q2oq6.jpg" alt="The Phantom Menace" class="media-poster">
+                <div class="media-content">
+                    <div class="media-title">The Phantom Menace <span class="media-year">(1999)</span></div>
+                    <div class="media-meta">
+                        <span class="rating low">5.4</span>
+                        <span>PG</span>
+                        <span>136 min</span>
+                    </div>
+                    <p class="media-summary">Two Jedi escape a hostile blockade and encounter a young boy who may bring balance to the Force.</p>
+                    <div class="media-credits"><strong>Director:</strong> George Lucas<br><strong>Cast:</strong> Liam Neeson, Ewan McGregor, Natalie Portman</div>
                 </div>
-                <p class="media-summary">Two Jedi escape a hostile blockade and encounter a young boy who may bring balance to the Force.</p>
-                <div class="media-credits"><strong>Director:</strong> George Lucas<br><strong>Cast:</strong> Liam Neeson, Ewan McGregor, Natalie Portman</div>
             </div>
 
-            <div class="media-card">
-                <div class="media-title">Attack of the Clones <span class="media-year">(2002)</span></div>
-                <div class="media-meta">
-                    <span class="rating mid">6.2</span>
-                    <span>PG</span>
-                    <span>143 min</span>
+            <div class="media-card media-card-with-poster">
+                <img src="https://image.tmdb.org/t/p/w200/oZNPzxqM2s5DyVWab09NTQScDQt.jpg" alt="Attack of the Clones" class="media-poster">
+                <div class="media-content">
+                    <div class="media-title">Attack of the Clones <span class="media-year">(2002)</span></div>
+                    <div class="media-meta">
+                        <span class="rating mid">6.2</span>
+                        <span>PG</span>
+                        <span>143 min</span>
+                    </div>
+                    <p class="media-summary">Following an assassination attempt on Senator Padme Amidala, Jedi Knights uncover a sinister plot.</p>
+                    <div class="media-credits"><strong>Director:</strong> George Lucas<br><strong>Cast:</strong> Hayden Christensen, Ewan McGregor, Natalie Portman</div>
                 </div>
-                <p class="media-summary">Following an assassination attempt on Senator Padme Amidala, Jedi Knights uncover a sinister plot.</p>
-                <div class="media-credits"><strong>Director:</strong> George Lucas<br><strong>Cast:</strong> Hayden Christensen, Ewan McGregor, Natalie Portman</div>
             </div>
 
-            <div class="media-card">
-                <div class="media-title">Revenge of the Sith <span class="media-year">(2005)</span></div>
-                <div class="media-meta">
-                    <span class="rating mid">7.9</span>
-                    <span>PG-13</span>
-                    <span>140 min</span>
+            <div class="media-card media-card-with-poster">
+                <img src="https://image.tmdb.org/t/p/w200/xfSAoBEm9MNBjmlNcDYLvLSMlnq.jpg" alt="Revenge of the Sith" class="media-poster">
+                <div class="media-content">
+                    <div class="media-title">Revenge of the Sith <span class="media-year">(2005)</span></div>
+                    <div class="media-meta">
+                        <span class="rating mid">7.9</span>
+                        <span>PG-13</span>
+                        <span>140 min</span>
+                    </div>
+                    <p class="media-summary">Obi-Wan pursues a new threat while Anakin Skywalker is lured into a sinister plot by the Dark Side.</p>
+                    <div class="media-credits"><strong>Director:</strong> George Lucas<br><strong>Cast:</strong> Hayden Christensen, Ewan McGregor, Natalie Portman</div>
                 </div>
-                <p class="media-summary">Obi-Wan pursues a new threat while Anakin Skywalker is lured into a sinister plot by the Dark Side.</p>
-                <div class="media-credits"><strong>Director:</strong> George Lucas<br><strong>Cast:</strong> Hayden Christensen, Ewan McGregor, Natalie Portman</div>
             </div>
 
-            <div class="media-card">
-                <div class="media-title">The Force Awakens <span class="media-year">(2015)</span></div>
-                <div class="media-meta">
-                    <span class="rating high">9.3</span>
-                    <span>PG-13</span>
-                    <span>138 min</span>
+            <div class="media-card media-card-with-poster">
+                <img src="https://image.tmdb.org/t/p/w200/wqnLdwVXoBjKibFRR5U3y0aDUhs.jpg" alt="The Force Awakens" class="media-poster">
+                <div class="media-content">
+                    <div class="media-title">The Force Awakens <span class="media-year">(2015)</span></div>
+                    <div class="media-meta">
+                        <span class="rating high">9.3</span>
+                        <span>PG-13</span>
+                        <span>138 min</span>
+                    </div>
+                    <p class="media-summary">Rey discovers a droid knowing Luke Skywalker's whereabouts and becomes entangled in a battle against the First Order.</p>
+                    <div class="media-credits"><strong>Director:</strong> J.J. Abrams<br><strong>Cast:</strong> Harrison Ford, Mark Hamill, Carrie Fisher</div>
                 </div>
-                <p class="media-summary">Rey discovers a droid knowing Luke Skywalker's whereabouts and becomes entangled in a battle against the First Order.</p>
-                <div class="media-credits"><strong>Director:</strong> J.J. Abrams<br><strong>Cast:</strong> Harrison Ford, Mark Hamill, Carrie Fisher</div>
             </div>
 
-            <div class="media-card">
-                <div class="media-title">The Last Jedi <span class="media-year">(2017)</span></div>
-                <div class="media-meta">
-                    <span class="rating high">9.1</span>
-                    <span>PG-13</span>
-                    <span>152 min</span>
+            <div class="media-card media-card-with-poster">
+                <img src="https://image.tmdb.org/t/p/w200/kOVEVeg59E0wsnXmF9nrh6OmWII.jpg" alt="The Last Jedi" class="media-poster">
+                <div class="media-content">
+                    <div class="media-title">The Last Jedi <span class="media-year">(2017)</span></div>
+                    <div class="media-meta">
+                        <span class="rating high">9.1</span>
+                        <span>PG-13</span>
+                        <span>152 min</span>
+                    </div>
+                    <p class="media-summary">Luke Skywalker reluctantly guides Rey in the ways of the Force while Leia leads the Resistance against the First Order.</p>
+                    <div class="media-credits"><strong>Director:</strong> Rian Johnson<br><strong>Cast:</strong> Mark Hamill, Carrie Fisher, Adam Driver</div>
                 </div>
-                <p class="media-summary">Luke Skywalker reluctantly guides Rey in the ways of the Force while Leia leads the Resistance against the First Order.</p>
-                <div class="media-credits"><strong>Director:</strong> Rian Johnson<br><strong>Cast:</strong> Mark Hamill, Carrie Fisher, Adam Driver</div>
             </div>
         </div>
 
         <h2 class="section-title">Classic Favorites</h2>
         <div class="media-grid">
-            <div class="media-card">
-                <div class="media-title">The Jungle Book <span class="media-year">(2016)</span></div>
-                <div class="media-meta">
-                    <span class="rating high">9.4</span>
-                    <span>PG</span>
-                    <span>106 min</span>
+            <div class="media-card media-card-with-poster">
+                <img src="https://image.tmdb.org/t/p/w200/2Epx7F9X7DrFptn4seqn4mzBVks.jpg" alt="The Jungle Book" class="media-poster">
+                <div class="media-content">
+                    <div class="media-title">The Jungle Book <span class="media-year">(2016)</span></div>
+                    <div class="media-meta">
+                        <span class="rating high">9.4</span>
+                        <span>PG</span>
+                        <span>106 min</span>
+                    </div>
+                    <div class="genre-tags">
+                        <span class="genre-tag">Action</span>
+                        <span class="genre-tag">Adventure</span>
+                    </div>
+                    <p class="media-summary">A man-cub named Mowgli, fostered by wolves, embarks on a journey of self discovery guided by Bagheera and Baloo.</p>
+                    <div class="media-credits"><strong>Director:</strong> Jon Favreau<br><strong>Cast:</strong> Neel Sethi, Bill Murray, Ben Kingsley</div>
                 </div>
-                <div class="genre-tags">
-                    <span class="genre-tag">Action</span>
-                    <span class="genre-tag">Adventure</span>
-                </div>
-                <p class="media-summary">A man-cub named Mowgli, fostered by wolves, embarks on a journey of self discovery guided by Bagheera and Baloo.</p>
-                <div class="media-credits"><strong>Director:</strong> Jon Favreau<br><strong>Cast:</strong> Neel Sethi, Bill Murray, Ben Kingsley</div>
-                <p class="library-tag">Kids & Family Movies</p>
             </div>
 
-            <div class="media-card">
-                <div class="media-title">Frozen <span class="media-year">(2013)</span></div>
-                <div class="media-meta">
-                    <span class="rating high">8.9</span>
-                    <span>PG</span>
-                    <span>102 min</span>
+            <div class="media-card media-card-with-poster">
+                <img src="https://image.tmdb.org/t/p/w200/kgwjIb2JDHRhNk13lmSxiClFjVk.jpg" alt="Frozen" class="media-poster">
+                <div class="media-content">
+                    <div class="media-title">Frozen <span class="media-year">(2013)</span></div>
+                    <div class="media-meta">
+                        <span class="rating high">8.9</span>
+                        <span>PG</span>
+                        <span>102 min</span>
+                    </div>
+                    <div class="genre-tags">
+                        <span class="genre-tag">Animation</span>
+                        <span class="genre-tag">Adventure</span>
+                    </div>
+                    <p class="media-summary">Anna teams up with Kristoff and Sven in an epic journey to find her sister Elsa, whose icy powers have trapped the kingdom in eternal winter.</p>
+                    <div class="media-credits"><strong>Directors:</strong> Chris Buck, Jennifer Lee<br><strong>Cast:</strong> Idina Menzel, Kristen Bell, Jonathan Groff</div>
                 </div>
-                <div class="genre-tags">
-                    <span class="genre-tag">Animation</span>
-                    <span class="genre-tag">Adventure</span>
-                </div>
-                <p class="media-summary">Anna teams up with Kristoff and Sven in an epic journey to find her sister Elsa, whose icy powers have trapped the kingdom in eternal winter.</p>
-                <div class="media-credits"><strong>Directors:</strong> Chris Buck, Jennifer Lee<br><strong>Cast:</strong> Idina Menzel, Kristen Bell, Jonathan Groff</div>
-                <p class="library-tag">Kids & Family Movies</p>
             </div>
 
-            <div class="media-card">
-                <div class="media-title">The Imitation Game <span class="media-year">(2014)</span></div>
-                <div class="media-meta">
-                    <span class="rating high">9.0</span>
-                    <span>PG-13</span>
-                    <span>114 min</span>
+            <div class="media-card media-card-with-poster">
+                <img src="https://image.tmdb.org/t/p/w200/zSqJ1qFq8NXFfi7JeIYMlzyR0dx.jpg" alt="The Imitation Game" class="media-poster">
+                <div class="media-content">
+                    <div class="media-title">The Imitation Game <span class="media-year">(2014)</span></div>
+                    <div class="media-meta">
+                        <span class="rating high">9.0</span>
+                        <span>PG-13</span>
+                        <span>114 min</span>
+                    </div>
+                    <div class="genre-tags">
+                        <span class="genre-tag">Drama</span>
+                        <span class="genre-tag">History</span>
+                    </div>
+                    <p class="media-summary">During WWII, mathematical genius Alan Turing works to crack the German Enigma code while facing personal struggles.</p>
+                    <div class="media-credits"><strong>Director:</strong> Morten Tyldum<br><strong>Cast:</strong> Benedict Cumberbatch, Keira Knightley, Matthew Goode</div>
                 </div>
-                <div class="genre-tags">
-                    <span class="genre-tag">Drama</span>
-                    <span class="genre-tag">History</span>
-                </div>
-                <p class="media-summary">During WWII, mathematical genius Alan Turing works to crack the German Enigma code while facing personal struggles.</p>
-                <div class="media-credits"><strong>Director:</strong> Morten Tyldum<br><strong>Cast:</strong> Benedict Cumberbatch, Keira Knightley, Matthew Goode</div>
-                <p class="library-tag">Dramas & Musicals</p>
             </div>
 
-            <div class="media-card">
-                <div class="media-title">The Day After Tomorrow <span class="media-year">(2004)</span></div>
-                <div class="media-meta">
-                    <span class="rating low">4.5</span>
-                    <span>PG-13</span>
-                    <span>124 min</span>
+            <div class="media-card media-card-with-poster">
+                <img src="https://image.tmdb.org/t/p/w200/Wr4HeYQRvwVCxzOV5TmGE7UkXq.jpg" alt="The Day After Tomorrow" class="media-poster">
+                <div class="media-content">
+                    <div class="media-title">The Day After Tomorrow <span class="media-year">(2004)</span></div>
+                    <div class="media-meta">
+                        <span class="rating low">4.5</span>
+                        <span>PG-13</span>
+                        <span>124 min</span>
+                    </div>
+                    <div class="genre-tags">
+                        <span class="genre-tag">Action</span>
+                        <span class="genre-tag">Adventure</span>
+                    </div>
+                    <p class="media-summary">Paleoclimatologist Jack Hall must trek from Washington, D.C. to New York City to save his son from a catastrophic new ice age.</p>
+                    <div class="media-credits"><strong>Director:</strong> Roland Emmerich<br><strong>Cast:</strong> Dennis Quaid, Jake Gyllenhaal, Emmy Rossum</div>
                 </div>
-                <div class="genre-tags">
-                    <span class="genre-tag">Action</span>
-                    <span class="genre-tag">Adventure</span>
+            </div>
+
+            <div class="media-card media-card-with-poster">
+                <img src="https://image.tmdb.org/t/p/w200/sW4qOa9yF0Ikg7lppncQ0n5UhKX.jpg" alt="Rise of the Guardians" class="media-poster">
+                <div class="media-content">
+                    <div class="media-title">Rise of the Guardians <span class="media-year">(2012)</span></div>
+                    <div class="media-meta">
+                        <span class="rating mid">7.5</span>
+                        <span>PG</span>
+                        <span>97 min</span>
+                    </div>
+                    <div class="genre-tags">
+                        <span class="genre-tag">Fantasy</span>
+                        <span class="genre-tag">Animation</span>
+                    </div>
+                    <p class="media-summary">When an evil spirit known as Pitch lays down the gauntlet to take over the world, the immortal Guardians must join forces for the first time to protect the hopes, beliefs, and imaginations of children all over the world.</p>
+                    <div class="media-credits"><strong>Director:</strong> Peter Ramsey<br><strong>Cast:</strong> Chris Pine, Alec Baldwin, Jude Law</div>
                 </div>
-                <p class="media-summary">Paleoclimatologist Jack Hall must trek from Washington, D.C. to New York City to save his son from a catastrophic new ice age.</p>
-                <div class="media-credits"><strong>Director:</strong> Roland Emmerich<br><strong>Cast:</strong> Dennis Quaid, Jake Gyllenhaal, Emmy Rossum</div>
-                <p class="library-tag">Action & Adventure</p>
             </div>
         </div>
 
@@ -847,6 +903,204 @@
                 <p class="media-summary">The Emperor of Nihon-Ja has been overthrown and is on the run. Horace, Halt, and Will must help restore him to his throne.</p>
                 <div class="media-credits"><strong>Author:</strong> John Flanagan</div>
                 <p class="library-tag">Ranger's Apprentice #10</p>
+            </div>
+        </div>
+
+        <h3 style="color: #1db954; margin-top: 30px;">Dungeon Crawler Carl Series</h3>
+        <div class="media-grid">
+            <div class="media-card new-release" style="border-left-color: #1db954;">
+                <div class="media-title">Dungeon Crawler Carl <span class="badge" style="background: #1db954;">NEW</span></div>
+                <div class="media-meta">
+                    <span>13.5 hours</span>
+                    <span>50 chapters</span>
+                </div>
+                <div class="genre-tags">
+                    <span class="genre-tag" style="background: rgba(29, 185, 84, 0.2); color: #1db954;">LitRPG</span>
+                    <span class="genre-tag" style="background: rgba(29, 185, 84, 0.2); color: #1db954;">Apocalypse</span>
+                </div>
+                <p class="media-summary">The world has become a dungeon. Carl and his ex-girlfriend's cat must fight their way through an 18-level death trap designed for entertainment of aliens.</p>
+                <div class="media-credits">
+                    <strong>Author:</strong> Matt Dinniman<br>
+                    <strong>Narrator:</strong> Jeff Hays
+                </div>
+                <p class="library-tag">Dungeon Crawler Carl #1</p>
+            </div>
+
+            <div class="media-card" style="border-left-color: #1db954;">
+                <div class="media-title">Carl's Doomsday Scenario</div>
+                <div class="media-meta">
+                    <span>11.5 hours</span>
+                    <span>28 chapters</span>
+                </div>
+                <p class="media-summary">Carl and Princess Donut descend to the third floor where the dungeon becomes deadlier than ever.</p>
+                <div class="media-credits"><strong>Author:</strong> Matt Dinniman<br><strong>Narrator:</strong> Jeff Hays</div>
+                <p class="library-tag">Dungeon Crawler Carl #2</p>
+            </div>
+
+            <div class="media-card" style="border-left-color: #1db954;">
+                <div class="media-title">The Dungeon Anarchist's Cookbook</div>
+                <div class="media-meta">
+                    <span>16.9 hours</span>
+                    <span>37 chapters</span>
+                </div>
+                <p class="media-summary">The fourth floor brings new challenges and Carl discovers the true scope of the dungeon's twisted game.</p>
+                <div class="media-credits"><strong>Author:</strong> Matt Dinniman<br><strong>Narrator:</strong> Jeff Hays</div>
+                <p class="library-tag">Dungeon Crawler Carl #3</p>
+            </div>
+
+            <div class="media-card" style="border-left-color: #1db954;">
+                <div class="media-title">The Gate of the Feral Gods</div>
+                <div class="media-meta">
+                    <span>18.1 hours</span>
+                    <span>37 chapters</span>
+                </div>
+                <p class="media-summary">Floor five awaits, and Carl must face ancient gods and impossible odds.</p>
+                <div class="media-credits"><strong>Author:</strong> Matt Dinniman<br><strong>Narrator:</strong> Jeff Hays</div>
+                <p class="library-tag">Dungeon Crawler Carl #4</p>
+            </div>
+
+            <div class="media-card" style="border-left-color: #1db954;">
+                <div class="media-title">The Butcher's Masquerade</div>
+                <div class="media-meta">
+                    <span>23.6 hours</span>
+                    <span>80 chapters</span>
+                </div>
+                <p class="media-summary">The sixth floor brings political intrigue and deadly masquerades.</p>
+                <div class="media-credits"><strong>Author:</strong> Matt Dinniman</div>
+                <p class="library-tag">Dungeon Crawler Carl #5</p>
+            </div>
+
+            <div class="media-card" style="border-left-color: #1db954;">
+                <div class="media-title">The Eye of the Bedlam Bride</div>
+                <div class="media-meta">
+                    <span>26.8 hours</span>
+                    <span>74 chapters</span>
+                </div>
+                <p class="media-summary">Floor seven pushes Carl and Donut to their absolute limits.</p>
+                <div class="media-credits"><strong>Author:</strong> Matt Dinniman</div>
+                <p class="library-tag">Dungeon Crawler Carl #6</p>
+            </div>
+
+            <div class="media-card new-release" style="border-left-color: #1db954;">
+                <div class="media-title">This Inevitable Ruin <span class="badge" style="background: #1db954;">NEW</span></div>
+                <div class="media-meta">
+                    <span>28.7 hours</span>
+                    <span>102 chapters</span>
+                </div>
+                <p class="media-summary">The latest and longest entry in the series. Carl faces his most dangerous floor yet.</p>
+                <div class="media-credits"><strong>Author:</strong> Matt Dinniman<br><strong>Narrators:</strong> Jeff Hays, Travis Baldree</div>
+                <p class="library-tag">Dungeon Crawler Carl #7 (2025)</p>
+            </div>
+        </div>
+
+        <h3 style="color: #1db954; margin-top: 30px;">Stephen Fry Collection</h3>
+        <div class="media-grid">
+            <div class="media-card" style="border-left-color: #1db954;">
+                <div class="media-title">Mythos</div>
+                <div class="media-meta">
+                    <span>15.4 hours</span>
+                    <span>13 chapters</span>
+                </div>
+                <div class="genre-tags">
+                    <span class="genre-tag" style="background: rgba(29, 185, 84, 0.2); color: #1db954;">Mythology</span>
+                    <span class="genre-tag" style="background: rgba(29, 185, 84, 0.2); color: #1db954;">Non-Fiction</span>
+                </div>
+                <p class="media-summary">Stephen Fry retells the Greek myths with wit and passion, from the creation of the world to the adventures of Zeus and beyond.</p>
+                <div class="media-credits"><strong>Author & Narrator:</strong> Stephen Fry</div>
+                <p class="library-tag">Greek Myths #1</p>
+            </div>
+
+            <div class="media-card" style="border-left-color: #1db954;">
+                <div class="media-title">Heroes</div>
+                <div class="media-meta">
+                    <span>15.0 hours</span>
+                    <span>20 chapters</span>
+                </div>
+                <p class="media-summary">Mortals and monsters, quests and adventures - the thrilling tales of Greek heroes brought to life.</p>
+                <div class="media-credits"><strong>Author & Narrator:</strong> Stephen Fry</div>
+                <p class="library-tag">Greek Myths #2</p>
+            </div>
+
+            <div class="media-card" style="border-left-color: #1db954;">
+                <div class="media-title">Troy</div>
+                <div class="media-meta">
+                    <span>11.0 hours</span>
+                    <span>70 chapters</span>
+                </div>
+                <p class="media-summary">The epic siege of Troy retold with Stephen Fry's signature wit and scholarship.</p>
+                <div class="media-credits"><strong>Author & Narrator:</strong> Stephen Fry</div>
+                <p class="library-tag">Greek Myths #3</p>
+            </div>
+
+            <div class="media-card" style="border-left-color: #1db954;">
+                <div class="media-title">Ghost Stories</div>
+                <div class="media-meta">
+                    <span>8.3 hours</span>
+                    <span>10 chapters</span>
+                </div>
+                <p class="media-summary">Stephen Fry's definitive collection of classic ghost stories from masters like Poe, M.R. James, and Bram Stoker.</p>
+                <div class="media-credits"><strong>Narrator:</strong> Stephen Fry</div>
+                <p class="library-tag">Ghost Stories Collection</p>
+            </div>
+        </div>
+
+        <h3 style="color: #1db954; margin-top: 30px;">Ernest Cline & More Sci-Fi</h3>
+        <div class="media-grid">
+            <div class="media-card" style="border-left-color: #1db954;">
+                <div class="media-title">Ready Player One</div>
+                <div class="media-meta">
+                    <span>15.7 hours</span>
+                </div>
+                <div class="genre-tags">
+                    <span class="genre-tag" style="background: rgba(29, 185, 84, 0.2); color: #1db954;">Sci-Fi</span>
+                    <span class="genre-tag" style="background: rgba(29, 185, 84, 0.2); color: #1db954;">Gaming</span>
+                </div>
+                <p class="media-summary">In a dystopian 2045, Wade Watts escapes into OASIS, a virtual reality world where the ultimate Easter egg hunt offers unimaginable riches.</p>
+                <div class="media-credits"><strong>Author:</strong> Ernest Cline</div>
+                <p class="library-tag">Ready Player One #1</p>
+            </div>
+
+            <div class="media-card" style="border-left-color: #1db954;">
+                <div class="media-title">Ready Player Two</div>
+                <div class="media-meta">
+                    <span>13.8 hours</span>
+                    <span>38 chapters</span>
+                </div>
+                <p class="media-summary">Days after winning OASIS founder James Halliday's contest, Wade discovers a new technological advancement hidden within the OASIS.</p>
+                <div class="media-credits"><strong>Author:</strong> Ernest Cline<br><strong>Narrator:</strong> Wil Wheaton</div>
+                <p class="library-tag">Ready Player One #2</p>
+            </div>
+
+            <div class="media-card" style="border-left-color: #1db954;">
+                <div class="media-title">Armada</div>
+                <div class="media-meta">
+                    <span>11.8 hours</span>
+                    <span>28 chapters</span>
+                </div>
+                <p class="media-summary">Zack Lightman has spent his life dreaming. When aliens attack, he discovers his gaming skills might save humanity.</p>
+                <div class="media-credits"><strong>Author:</strong> Ernest Cline<br><strong>Narrator:</strong> Wil Wheaton</div>
+                <p class="library-tag">Standalone</p>
+            </div>
+        </div>
+
+        <h3 style="color: #1db954; margin-top: 30px;">Harry Potter Full-Cast Edition</h3>
+        <div class="media-grid">
+            <div class="media-card new-release" style="border-left-color: #1db954;">
+                <div class="media-title">Harry Potter and the Prisoner of Azkaban <span class="badge" style="background: #1db954;">NEW</span></div>
+                <div class="media-meta">
+                    <span>11.5 hours</span>
+                    <span>24 chapters</span>
+                </div>
+                <div class="genre-tags">
+                    <span class="genre-tag" style="background: rgba(29, 185, 84, 0.2); color: #1db954;">Fantasy</span>
+                    <span class="genre-tag" style="background: rgba(29, 185, 84, 0.2); color: #1db954;">Full-Cast</span>
+                </div>
+                <p class="media-summary">The full-cast dramatized edition featuring Hugh Laurie, Riz Ahmed, Simon Pegg, and many more bringing the magical world to life.</p>
+                <div class="media-credits">
+                    <strong>Author:</strong> J.K. Rowling<br>
+                    <strong>Cast:</strong> Hugh Laurie, Riz Ahmed, Simon Pegg, Matt Berry, and more
+                </div>
+                <p class="library-tag">Harry Potter Full-Cast #3 (2026)</p>
             </div>
         </div>
 
