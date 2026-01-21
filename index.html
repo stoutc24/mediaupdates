@@ -3,10 +3,447 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media Updates</title>
+    <title>Media Updates - Plex & Audiobookshelf</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #eee;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 {
+            text-align: center;
+            color: #e5a00d;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #888;
+            margin-bottom: 30px;
+        }
+        .update-date {
+            text-align: center;
+            color: #e5a00d;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+        }
+        .section-title {
+            color: #e5a00d;
+            border-bottom: 2px solid #e5a00d;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .media-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .media-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .media-card.new-release {
+            border-left: 4px solid #e5a00d;
+        }
+        .media-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+        .media-year { color: #e5a00d; font-weight: bold; }
+        .media-meta {
+            color: #999;
+            font-size: 0.85em;
+            margin: 8px 0;
+        }
+        .media-meta span { margin-right: 15px; }
+        .rating {
+            display: inline-block;
+            background: #e5a00d;
+            color: #000;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.85em;
+        }
+        .rating.low { background: #dc3545; color: #fff; }
+        .rating.mid { background: #ffc107; color: #000; }
+        .rating.high { background: #28a745; color: #fff; }
+        .genre-tags {
+            margin: 10px 0;
+        }
+        .genre-tag {
+            display: inline-block;
+            background: rgba(229, 160, 13, 0.2);
+            color: #e5a00d;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        .media-summary {
+            color: #bbb;
+            font-size: 0.9em;
+            line-height: 1.5;
+            margin: 10px 0;
+        }
+        .media-credits {
+            font-size: 0.85em;
+            color: #888;
+            margin-top: 10px;
+        }
+        .media-credits strong { color: #aaa; }
+        .badge {
+            display: inline-block;
+            background: #e5a00d;
+            color: #000;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.75em;
+            font-weight: bold;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        .badge.tv { background: #9b59b6; color: #fff; }
+        .library-tag {
+            font-size: 0.8em;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
 </head>
 <body>
-    <h1>Media Updates</h1>
-    <p>Updates and changelogs for Plex and Audiobookshelf.</p>
+    <div class="container">
+        <h1>Stout Family Servers</h1>
+        <p class="subtitle">Media Updates for Plex & Audiobookshelf</p>
+        <p class="update-date">Last Updated: January 20, 2026</p>
+
+        <h2 class="section-title">New Releases (2025-2026)</h2>
+        <div class="media-grid">
+            <div class="media-card new-release">
+                <div class="media-title">The Rip <span class="media-year">(2026)</span> <span class="badge">NEW</span></div>
+                <div class="media-meta">
+                    <span class="rating high">8.1</span>
+                    <span>R</span>
+                    <span>115 min</span>
+                </div>
+                <div class="genre-tags">
+                    <span class="genre-tag">Crime</span>
+                    <span class="genre-tag">Drama</span>
+                </div>
+                <p class="media-summary">A group of Miami cops discovers a stash of millions in cash, leading to distrust and moral dilemmas within the team.</p>
+                <div class="media-credits">
+                    <strong>Director:</strong> Joe Carnahan<br>
+                    <strong>Cast:</strong> Matt Damon, Ben Affleck, Steven Yeun
+                </div>
+                <p class="library-tag">Dramas & Musicals</p>
+            </div>
+
+            <div class="media-card new-release">
+                <div class="media-title">Dust Bunny <span class="media-year">(2025)</span> <span class="badge">NEW</span></div>
+                <div class="media-meta">
+                    <span class="rating high">8.5</span>
+                    <span>R</span>
+                    <span>106 min</span>
+                </div>
+                <div class="genre-tags">
+                    <span class="genre-tag">Drama</span>
+                    <span class="genre-tag">Horror</span>
+                </div>
+                <p class="media-summary">Ten-year-old Aurora asks her hitman neighbor to kill the monster she believes ate her family. A dark and gripping tale of childhood trauma and unlikely alliances.</p>
+                <div class="media-credits">
+                    <strong>Director:</strong> Bryan Fuller<br>
+                    <strong>Cast:</strong> Sophie Sloan, Mads Mikkelsen, Sigourney Weaver
+                </div>
+                <p class="library-tag">Fright Night</p>
+            </div>
+
+            <div class="media-card new-release">
+                <div class="media-title">Zootopia 2 <span class="media-year">(2025)</span> <span class="badge">NEW</span></div>
+                <div class="media-meta">
+                    <span class="rating high">9.1</span>
+                    <span>PG</span>
+                    <span>107 min</span>
+                </div>
+                <div class="genre-tags">
+                    <span class="genre-tag">Animation</span>
+                    <span class="genre-tag">Comedy</span>
+                </div>
+                <p class="media-summary">Rookie cops Judy Hopps and Nick Wilde investigate a mystery involving Gary De'Snake and uncover a conspiracy that threatens Zootopia.</p>
+                <div class="media-credits">
+                    <strong>Directors:</strong> Jared Bush, Byron Howard<br>
+                    <strong>Cast:</strong> Ginnifer Goodwin, Jason Bateman, Ke Huy Quan
+                </div>
+                <p class="library-tag">Kids & Family Movies</p>
+            </div>
+
+            <div class="media-card new-release">
+                <div class="media-title">The SpongeBob Movie: Search for SquarePants <span class="media-year">(2025)</span></div>
+                <div class="media-meta">
+                    <span class="rating high">8.2</span>
+                    <span>PG</span>
+                    <span>89 min</span>
+                </div>
+                <div class="genre-tags">
+                    <span class="genre-tag">Animation</span>
+                    <span class="genre-tag">Adventure</span>
+                </div>
+                <p class="media-summary">SpongeBob follows The Flying Dutchman on a seafaring adventure to prove his bravery and discover new undersea worlds.</p>
+                <div class="media-credits">
+                    <strong>Director:</strong> Derek Drymon<br>
+                    <strong>Cast:</strong> Tom Kenny, Clancy Brown, Rodger Bumpass
+                </div>
+                <p class="library-tag">Kids & Family Movies</p>
+            </div>
+
+            <div class="media-card new-release">
+                <div class="media-title">28 Years Later: The Bone Temple <span class="media-year">(2026)</span> <span class="badge">NEW</span></div>
+                <div class="media-meta">
+                    <span class="rating high">9.3</span>
+                    <span>R</span>
+                    <span>104 min</span>
+                </div>
+                <div class="genre-tags">
+                    <span class="genre-tag">Horror</span>
+                    <span class="genre-tag">Sci-Fi</span>
+                </div>
+                <p class="media-summary">As Spike is inducted into Jimmy Crystal's gang on the mainland, Dr. Kelson makes a discovery that could change everything about the infected.</p>
+                <div class="media-credits">
+                    <strong>Director:</strong> Nia DaCosta<br>
+                    <strong>Writer:</strong> Alex Garland<br>
+                    <strong>Cast:</strong> Ralph Fiennes, Alfie Williams, Jack O'Connell
+                </div>
+                <p class="library-tag">Fright Night</p>
+            </div>
+
+            <div class="media-card new-release">
+                <div class="media-title">Avatar: Fire and Ash <span class="media-year">(2025)</span></div>
+                <div class="media-meta">
+                    <span class="rating mid">6.6</span>
+                    <span>PG-13</span>
+                    <span>190 min</span>
+                </div>
+                <div class="genre-tags">
+                    <span class="genre-tag">Action</span>
+                    <span class="genre-tag">Adventure</span>
+                </div>
+                <p class="media-summary">Jake and Neytiri's family encounters the aggressive Ash People and their leader, facing new challenges on Pandora.</p>
+                <div class="media-credits">
+                    <strong>Director:</strong> James Cameron<br>
+                    <strong>Cast:</strong> Sam Worthington, Zoe Saldana, Sigourney Weaver
+                </div>
+                <p class="library-tag">Science Fiction & Fantasy</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">TV Shows</h2>
+        <div class="media-grid">
+            <div class="media-card new-release">
+                <div class="media-title">A Knight of the Seven Kingdoms <span class="badge tv">TV</span></div>
+                <div class="media-meta">
+                    <span>TV-MA</span>
+                    <span>42 min/episode</span>
+                </div>
+                <div class="genre-tags">
+                    <span class="genre-tag">Fantasy</span>
+                    <span class="genre-tag">Drama</span>
+                </div>
+                <p class="media-summary">On his journey to the forthcoming tournament in Ashford, Dunk meets a young boy who will change his destiny. Based on George R.R. Martin's tales of Westeros.</p>
+                <div class="media-credits">
+                    <strong>Director:</strong> Owen Harris<br>
+                    <strong>Writers:</strong> Ira Parker, George R.R. Martin<br>
+                    <strong>Cast:</strong> Peter Claffey, Dexter Sol Ansell, Finn Bennett, Bertie Carvel
+                </div>
+                <p class="library-tag">Episode: "The Hedge Knight" (S1E1) - Added Jan 18, 2026</p>
+            </div>
+
+            <div class="media-card">
+                <div class="media-title">Percy Jackson and the Olympians <span class="badge tv">TV</span></div>
+                <div class="genre-tags">
+                    <span class="genre-tag">Fantasy</span>
+                    <span class="genre-tag">Adventure</span>
+                </div>
+                <p class="media-summary">Percy Jackson discovers he's a demigod and must go on a quest to prevent a war between the Greek gods. Season 1 now available.</p>
+                <p class="library-tag">Season 1 Complete</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Star Wars Collection</h2>
+        <div class="media-grid">
+            <div class="media-card">
+                <div class="media-title">Star Wars (A New Hope) <span class="media-year">(1977)</span></div>
+                <div class="media-meta">
+                    <span class="rating high">9.4</span>
+                    <span>PG</span>
+                    <span>125 min</span>
+                </div>
+                <p class="media-summary">Luke Skywalker joins forces with a Jedi Knight and others to rescue Princess Leia from the Empire's world-destroying battle station.</p>
+                <div class="media-credits"><strong>Director:</strong> George Lucas<br><strong>Cast:</strong> Mark Hamill, Harrison Ford, Carrie Fisher</div>
+            </div>
+
+            <div class="media-card">
+                <div class="media-title">The Empire Strikes Back <span class="media-year">(1980)</span></div>
+                <div class="media-meta">
+                    <span class="rating high">9.3</span>
+                    <span>PG</span>
+                    <span>127 min</span>
+                </div>
+                <p class="media-summary">Luke learns the Force from Yoda while Darth Vader pursues him relentlessly. One of the greatest sequels ever made.</p>
+                <div class="media-credits"><strong>Director:</strong> Irvin Kershner<br><strong>Cast:</strong> Mark Hamill, Harrison Ford, Carrie Fisher</div>
+            </div>
+
+            <div class="media-card">
+                <div class="media-title">Return of the Jedi <span class="media-year">(1983)</span></div>
+                <div class="media-meta">
+                    <span class="rating high">8.3</span>
+                    <span>PG</span>
+                    <span>135 min</span>
+                </div>
+                <p class="media-summary">Luke battles Jabba the Hutt and Darth Vader to save his comrades and triumph over the Empire.</p>
+                <div class="media-credits"><strong>Director:</strong> Richard Marquand<br><strong>Cast:</strong> Mark Hamill, Harrison Ford, Carrie Fisher</div>
+            </div>
+
+            <div class="media-card">
+                <div class="media-title">The Phantom Menace <span class="media-year">(1999)</span></div>
+                <div class="media-meta">
+                    <span class="rating low">5.4</span>
+                    <span>PG</span>
+                    <span>136 min</span>
+                </div>
+                <p class="media-summary">Two Jedi escape a hostile blockade and encounter a young boy who may bring balance to the Force.</p>
+                <div class="media-credits"><strong>Director:</strong> George Lucas<br><strong>Cast:</strong> Liam Neeson, Ewan McGregor, Natalie Portman</div>
+            </div>
+
+            <div class="media-card">
+                <div class="media-title">Attack of the Clones <span class="media-year">(2002)</span></div>
+                <div class="media-meta">
+                    <span class="rating mid">6.2</span>
+                    <span>PG</span>
+                    <span>143 min</span>
+                </div>
+                <p class="media-summary">Following an assassination attempt on Senator Padme Amidala, Jedi Knights uncover a sinister plot.</p>
+                <div class="media-credits"><strong>Director:</strong> George Lucas<br><strong>Cast:</strong> Hayden Christensen, Ewan McGregor, Natalie Portman</div>
+            </div>
+
+            <div class="media-card">
+                <div class="media-title">Revenge of the Sith <span class="media-year">(2005)</span></div>
+                <div class="media-meta">
+                    <span class="rating mid">7.9</span>
+                    <span>PG-13</span>
+                    <span>140 min</span>
+                </div>
+                <p class="media-summary">Obi-Wan pursues a new threat while Anakin Skywalker is lured into a sinister plot by the Dark Side.</p>
+                <div class="media-credits"><strong>Director:</strong> George Lucas<br><strong>Cast:</strong> Hayden Christensen, Ewan McGregor, Natalie Portman</div>
+            </div>
+
+            <div class="media-card">
+                <div class="media-title">The Force Awakens <span class="media-year">(2015)</span></div>
+                <div class="media-meta">
+                    <span class="rating high">9.3</span>
+                    <span>PG-13</span>
+                    <span>138 min</span>
+                </div>
+                <p class="media-summary">Rey discovers a droid knowing Luke Skywalker's whereabouts and becomes entangled in a battle against the First Order.</p>
+                <div class="media-credits"><strong>Director:</strong> J.J. Abrams<br><strong>Cast:</strong> Harrison Ford, Mark Hamill, Carrie Fisher</div>
+            </div>
+
+            <div class="media-card">
+                <div class="media-title">The Last Jedi <span class="media-year">(2017)</span></div>
+                <div class="media-meta">
+                    <span class="rating high">9.1</span>
+                    <span>PG-13</span>
+                    <span>152 min</span>
+                </div>
+                <p class="media-summary">Luke Skywalker reluctantly guides Rey in the ways of the Force while Leia leads the Resistance against the First Order.</p>
+                <div class="media-credits"><strong>Director:</strong> Rian Johnson<br><strong>Cast:</strong> Mark Hamill, Carrie Fisher, Adam Driver</div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Classic Favorites</h2>
+        <div class="media-grid">
+            <div class="media-card">
+                <div class="media-title">The Jungle Book <span class="media-year">(2016)</span></div>
+                <div class="media-meta">
+                    <span class="rating high">9.4</span>
+                    <span>PG</span>
+                    <span>106 min</span>
+                </div>
+                <div class="genre-tags">
+                    <span class="genre-tag">Action</span>
+                    <span class="genre-tag">Adventure</span>
+                </div>
+                <p class="media-summary">A man-cub named Mowgli, fostered by wolves, embarks on a journey of self discovery guided by Bagheera and Baloo.</p>
+                <div class="media-credits"><strong>Director:</strong> Jon Favreau<br><strong>Cast:</strong> Neel Sethi, Bill Murray, Ben Kingsley</div>
+                <p class="library-tag">Kids & Family Movies</p>
+            </div>
+
+            <div class="media-card">
+                <div class="media-title">Frozen <span class="media-year">(2013)</span></div>
+                <div class="media-meta">
+                    <span class="rating high">8.9</span>
+                    <span>PG</span>
+                    <span>102 min</span>
+                </div>
+                <div class="genre-tags">
+                    <span class="genre-tag">Animation</span>
+                    <span class="genre-tag">Adventure</span>
+                </div>
+                <p class="media-summary">Anna teams up with Kristoff and Sven in an epic journey to find her sister Elsa, whose icy powers have trapped the kingdom in eternal winter.</p>
+                <div class="media-credits"><strong>Directors:</strong> Chris Buck, Jennifer Lee<br><strong>Cast:</strong> Idina Menzel, Kristen Bell, Jonathan Groff</div>
+                <p class="library-tag">Kids & Family Movies</p>
+            </div>
+
+            <div class="media-card">
+                <div class="media-title">The Imitation Game <span class="media-year">(2014)</span></div>
+                <div class="media-meta">
+                    <span class="rating high">9.0</span>
+                    <span>PG-13</span>
+                    <span>114 min</span>
+                </div>
+                <div class="genre-tags">
+                    <span class="genre-tag">Drama</span>
+                    <span class="genre-tag">History</span>
+                </div>
+                <p class="media-summary">During WWII, mathematical genius Alan Turing works to crack the German Enigma code while facing personal struggles.</p>
+                <div class="media-credits"><strong>Director:</strong> Morten Tyldum<br><strong>Cast:</strong> Benedict Cumberbatch, Keira Knightley, Matthew Goode</div>
+                <p class="library-tag">Dramas & Musicals</p>
+            </div>
+
+            <div class="media-card">
+                <div class="media-title">The Day After Tomorrow <span class="media-year">(2004)</span></div>
+                <div class="media-meta">
+                    <span class="rating low">4.5</span>
+                    <span>PG-13</span>
+                    <span>124 min</span>
+                </div>
+                <div class="genre-tags">
+                    <span class="genre-tag">Action</span>
+                    <span class="genre-tag">Adventure</span>
+                </div>
+                <p class="media-summary">Paleoclimatologist Jack Hall must trek from Washington, D.C. to New York City to save his son from a catastrophic new ice age.</p>
+                <div class="media-credits"><strong>Director:</strong> Roland Emmerich<br><strong>Cast:</strong> Dennis Quaid, Jake Gyllenhaal, Emmy Rossum</div>
+                <p class="library-tag">Action & Adventure</p>
+            </div>
+        </div>
+
+        <footer style="text-align: center; margin-top: 50px; padding: 20px; color: #666; border-top: 1px solid #333;">
+            <p>Stout Family Servers - Powered by Plex & Tautulli</p>
+        </footer>
+    </div>
 </body>
 </html>
